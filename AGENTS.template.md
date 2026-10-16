@@ -53,9 +53,10 @@ One topic has exactly one owning skill. Skills reference each other instead of r
 - If `<guideline>/second-brain/INDEX.md` exists, check it for known gotchas before debugging.
 - Backend contracts live in the folder set in `stack-profile.md` → HTTP → API contracts location (default `<guideline>/api-contracts/`). Read them before integrating an endpoint.
 - Starting formats for these project-owned files are in `<guideline>/scaffold/`.
+- Folders under `src/` may contain a short `AGENTS.md` (with a `CLAUDE.md` pointer). Read it before editing files in that folder; the full rules stay in the owning skill it names.
 
 ## Maintenance
 
-- Skills are edited only in `<guideline>/skills/tier-*/` and copied to agent folders with `node <guideline>/scripts/sync-skills.mjs`. Never edit the copies.
+- Skills are edited only in `<guideline>/skills/tier-*/` and copied to agent folders with `node <guideline>/scripts/sync-skills.mjs`. Never edit the copies (if `<guideline>/hooks/` is installed, such edits are blocked automatically).
 - A new skill must be added to the table above and to `<guideline>/README.md`, using the `bp-` prefix.
 - When a reference pattern changes in code, update the matching skill or `references/<stack>.md` in the same change.

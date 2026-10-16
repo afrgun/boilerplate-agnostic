@@ -17,7 +17,11 @@ These instructions are for agents **editing the pack itself**. Do not follow `AG
 | `agents/*.md` | Reviewer subagents | Yes (synced into `.claude/agents/`) |
 | `lint/` | ESLint boundaries config (v7) | Yes |
 | `scripts/sync-skills.mjs` | Copies skills into agent folders of a target repo; `--check` for CI | Yes |
-| `scaffold/` | Starting formats for project-owned files (page-map, second-brain, api-contracts, ASSUMPTIONS) | Yes — copied once; the project's copies are never overwritten on upgrade |
+| `scaffold/` | Starting formats for project-owned files (page-map, second-brain, api-contracts, ASSUMPTIONS, `layer-agents/src/**` per-folder AGENTS.md) | Yes — copied once; the project's copies are never overwritten on upgrade |
+| `hooks/` | Agent hooks (guard synced copies, lint edited file) + example settings | Yes |
+| `PROMPTS.md` | Prompt cheat sheet for humans | Yes |
+
+Per-folder `scaffold/layer-agents/**/AGENTS.md` files are short local reminders that point to the owning skill — never restate a full rule table there; change the skill instead.
 
 ## Rules when editing
 

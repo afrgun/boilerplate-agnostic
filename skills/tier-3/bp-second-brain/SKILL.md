@@ -59,3 +59,7 @@ The same lesson biting **2–3 times** must be promoted:
 2. A rule in the owning skill / `AGENTS.md` gotchas.
 
 Mark the note `**Promoted**: <where>`.
+
+## Examples
+
+Worked examples (fictional `topup` feature): `examples.md` in this skill folder. Read it when the rules above leave a placement or format decision unclear.

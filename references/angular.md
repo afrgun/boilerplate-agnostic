@@ -69,7 +69,8 @@ export class HttpBankRepository extends BankRepository {
   async getBanks(): Promise<Result<Bank[], AppError>> {
     try {
       const res = await firstValueFrom(this.http.get<{ data?: BankApiItem[] }>(API.topup.banks));
-      return ok((res?.data ?? []).map(toBank));
+      const banks = toBanks(res?.data ?? []);                  // mapper: react.md § 6
+      return banks ? ok(banks) : err({ type: 'server', message: 'Invalid bank data from server' });
     } catch (e) {
       return err(toAppError(e));   // single place: HTTP status / BE code → AppError
     }

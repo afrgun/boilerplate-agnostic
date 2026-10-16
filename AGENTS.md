@@ -12,7 +12,8 @@ These instructions are for agents **editing the pack itself**. Do not follow `AG
 | `AGENTS.template.md`, `CLAUDE.template.md` | Root instructions for target repos | Yes (renamed) |
 | `stack-profile.template.md` | Per-project facts template | Yes |
 | `references/{nextjs,react,angular}.md` | Stack methods + code templates, same section numbering | Yes |
-| `skills/tier-{1,2,3}/<bp-skill>/SKILL.md` | Skill source of truth | Yes (synced flat into agent folders) |
+| `skills/tier-{1,2,3}/<bp-skill>/SKILL.md` | Skill source of truth (rules) | Yes (synced flat into agent folders) |
+| `skills/tier-{1,2,3}/<bp-skill>/examples.md` | Worked examples for that skill — decisions and output formats, fictional `topup` feature, framework-free; stack code belongs in `references/` | Yes (synced with the skill) |
 | `agents/*.md` | Reviewer subagents | Yes (synced into `.claude/agents/`) |
 | `lint/` | ESLint boundaries config (v7) | Yes |
 | `scripts/sync-skills.mjs` | Copies skills into agent folders of a target repo; `--check` for CI | Yes |

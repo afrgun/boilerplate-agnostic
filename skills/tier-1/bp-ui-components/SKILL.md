@@ -5,7 +5,7 @@ description: Use when creating, refactoring, or reviewing UI — placing compone
 
 # UI Components (Atomic Design)
 
-Owning skill for UI composition. Stack-specific syntax (JSX, Angular templates) comes from `<guideline>/references/<stack>.md` § 10.
+Owning skill for UI composition. Stack-specific template/markup syntax comes from `<guideline>/references/<stack>.md` § 10.
 
 ## Stack context (read first)
 
@@ -49,3 +49,7 @@ Promote a feature-local component to `shared/ui` only when a second feature need
 - Empty/loading/error states covered.
 - Missing values render `'-'`.
 - `bp-conventions` done criteria pass.
+
+## Examples
+
+Worked examples (fictional `topup` feature): `examples.md` in this skill folder. Read it when the rules above leave a placement or format decision unclear.

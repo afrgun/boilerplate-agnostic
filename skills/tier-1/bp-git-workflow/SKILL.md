@@ -55,3 +55,7 @@ Build the description from the diff against the target branch, not from memory:
 ```
 
 Title = commit-style subject with ticket. Use the tool from the profile (`glab` / `gh`); if it is not installed or authenticated, show the description and ask the user to create it.
+
+## Examples
+
+Worked examples (fictional `topup` feature): `examples.md` in this skill folder. Read it when the rules above leave a placement or format decision unclear.

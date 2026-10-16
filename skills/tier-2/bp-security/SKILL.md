@@ -32,3 +32,7 @@ description: Use when touching authentication, tokens, cookies, user input, rend
 - [ ] Any new input without schema validation?
 
 Report unchecked items explicitly instead of assuming they are fine.
+
+## Examples
+
+Worked examples (fictional `topup` feature): `examples.md` in this skill folder. Read it when the rules above leave a placement or format decision unclear.

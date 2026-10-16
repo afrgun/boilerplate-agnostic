@@ -73,7 +73,8 @@ export const createHttpBankRepository = (http = serverHttp()): BankRepository =>
   async getBanks() {
     const res = await http.get<{ data?: BankApiItem[] }>(API.topup.banks, { cache: 'no-store' }); // set caching explicitly
     if (!res.ok) return res;
-    return ok((res.value.data ?? []).map(toBank));
+    const banks = toBanks(res.value.data ?? []);                // mapper: react.md § 6
+    return banks ? ok(banks) : err({ type: 'server', message: 'Invalid bank data from server' });
   },
 });
 ```

@@ -62,3 +62,7 @@ A change is done only when **all** of these hold:
 7. Skills/references updated if a shared pattern changed.
 
 Report the commands you ran and their results. Never claim done on unverified work.
+
+## Examples
+
+Worked examples (fictional `topup` feature): `examples.md` in this skill folder. Read it when the rules above leave a placement or format decision unclear.

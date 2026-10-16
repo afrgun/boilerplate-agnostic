@@ -33,3 +33,7 @@ Target shape comes from `bp-architecture`; tests from `bp-testing`.
 ## Report
 
 Per step: what moved where, tests added, behavior changes (if any), remaining legacy in the area.
+
+## Examples
+
+Worked examples (fictional `topup` feature): `examples.md` in this skill folder. Read it when the rules above leave a placement or format decision unclear.

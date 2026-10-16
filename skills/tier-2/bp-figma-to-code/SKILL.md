@@ -45,3 +45,7 @@ If the Figma node cannot be read (no access, tool error, wrong node), it is **no
 - Every native HTML exception listed with tag, file, and reason no atom fits.
 - States from the design implemented.
 - Visual check is done by the user unless the profile/team says otherwise.
+
+## Examples
+
+Worked examples (fictional `topup` feature): `examples.md` in this skill folder. Read it when the rules above leave a placement or format decision unclear.

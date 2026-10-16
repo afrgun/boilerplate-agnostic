@@ -23,3 +23,7 @@ Read `<guideline>/stack-profile.md` → **Git** and any release section the team
 - Never move or delete an existing tag without explicit approval.
 - Never tag from a dirty worktree.
 - Verification (`bp-conventions` done criteria, including build) passes before tagging.
+
+## Examples
+
+Worked examples (fictional `topup` feature): `examples.md` in this skill folder. Read it when the rules above leave a placement or format decision unclear.

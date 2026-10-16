@@ -17,7 +17,7 @@ If `mode: competition` in the profile, apply overrides from `bp-competition-mode
 |---|---|
 | Files & folders | per profile (default `kebab-case`) |
 | Components | `PascalCase` |
-| Functions, variables, stores, hooks | `camelCase`; hooks start with `use` |
+| Functions, variables, stores, hooks | `camelCase`; hooks start with `use` — and **only** hooks: a plain function named `useX` breaks hook lint rules (name it `isX`/`getX`) |
 | Types & interfaces | `PascalCase`, no `I` prefix unless the profile says so |
 | Constants | `UPPER_SNAKE_CASE` for true constants |
 | Mappers | `toX()` / `fromX()` |

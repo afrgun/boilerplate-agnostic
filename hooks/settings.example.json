@@ -4,7 +4,7 @@
       {
         "matcher": "Edit|MultiEdit|Write|NotebookEdit",
         "hooks": [
-          { "type": "command", "command": "node boilerplate/hooks/guard-synced-copies.mjs" }
+          { "type": "command", "command": "node guideline/hooks/guard-synced-copies.mjs" }
         ]
       }
     ],
@@ -12,7 +12,7 @@
       {
         "matcher": "Edit|MultiEdit|Write",
         "hooks": [
-          { "type": "command", "command": "node boilerplate/hooks/lint-edited-file.mjs" }
+          { "type": "command", "command": "node guideline/hooks/lint-edited-file.mjs" }
         ]
       }
     ]

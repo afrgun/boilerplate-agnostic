@@ -1,6 +1,6 @@
 # AGENTS.md — maintaining this pack
 
-This repository is the **source** of a stack-agnostic AI guideline pack for frontend teams. It is not an application. Target projects copy this repo's content into a `boilerplate/` folder; `AGENTS.template.md` / `CLAUDE.template.md` become their root `AGENTS.md` / `CLAUDE.md`.
+This repository is the **source** of a stack-agnostic AI guideline pack for frontend teams. It is not an application. Target projects copy this repo's content into a `guideline/` folder; `AGENTS.template.md` / `CLAUDE.template.md` become their root `AGENTS.md` / `CLAUDE.md`.
 
 These instructions are for agents **editing the pack itself**. Do not follow `AGENTS.template.md` as if this were a target project.
 
@@ -37,7 +37,7 @@ Per-folder `scaffold/layer-agents/**/AGENTS.md` files are short local reminders 
 
 | Check | How |
 |---|---|
-| Skill copies work | Copy the repo into a temp folder as `<tmp>/boilerplate/`, run `node <tmp>/boilerplate/scripts/sync-skills.mjs`, then `--check` → must print `OK` |
+| Skill copies work | Copy the repo into a temp folder as `<tmp>/guideline/`, run `node <tmp>/guideline/scripts/sync-skills.mjs`, then `--check` → must print `OK` |
 | Lint matrix (when `lint/` or layer layout changes) | In a temp project with `eslint@9`, `eslint-plugin-boundaries@^7`, `eslint-import-resolver-typescript@^4`, `typescript-eslint@^8`: allowed imports (domain→kernel, infrastructure→core/application, di→infrastructure, presentation→di, app→presentation/shared-ui, `*.routes.ts`→infrastructure, `src/*.ts` entry files) report 0 errors; forbidden imports (domain→infrastructure, cross-feature, presentation→infrastructure, presentation→app, core→domain, shared-ui→domain, application→react, unknown file under `src/`) each report an error |
 | No internal names | `grep -rniE "<internal names>" .` returns nothing |
 | Cross-references | Every `bp-*` mentioned in any file exists under `skills/`; no links to removed files |

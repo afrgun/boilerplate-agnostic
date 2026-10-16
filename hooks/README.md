@@ -12,7 +12,7 @@ Skill/agent milik tim yang **bukan** dari paket (nama tidak diawali `bp-`, atau 
 ## Pemasangan (Claude Code)
 
 1. Gabungkan isi `settings.example.json` ke `.claude/settings.json` di root repo target (commit, agar berlaku untuk seluruh tim).
-2. Sesuaikan path `boilerplate/` bila folder paket diberi nama lain.
+2. Sesuaikan path `guideline/` bila folder paket diberi nama lain.
 3. Cek dengan perintah `/hooks` di Claude Code bahwa kedua hook terdaftar.
 4. Format konfigurasi hook mengikuti dokumentasi Claude Code; bila versi Claude Code yang dipakai mengubah formatnya, sesuaikan file setting — script tidak perlu diubah selama input tetap JSON di stdin dengan `tool_input.file_path`.
 
@@ -21,6 +21,6 @@ Agent lain (Codex, Gemini, dsb.) punya mekanisme hook/policy sendiri; script ini
 ## Uji manual
 
 ```bash
-echo '{"tool_input":{"file_path":".claude/skills/bp-testing/SKILL.md"}}' | node boilerplate/hooks/guard-synced-copies.mjs; echo "exit=$?"   # → exit=2
-echo '{"tool_input":{"file_path":"src/features/topup/domain/bank.ts"}}' | node boilerplate/hooks/guard-synced-copies.mjs; echo "exit=$?"  # → exit=0
+echo '{"tool_input":{"file_path":".claude/skills/bp-testing/SKILL.md"}}' | node guideline/hooks/guard-synced-copies.mjs; echo "exit=$?"   # → exit=2
+echo '{"tool_input":{"file_path":"src/features/topup/domain/bank.ts"}}' | node guideline/hooks/guard-synced-copies.mjs; echo "exit=$?"  # → exit=0
 ```

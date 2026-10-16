@@ -2,13 +2,13 @@
 
 Contoh kalimat untuk memulai pekerjaan dengan AI agent di repo yang memakai paket ini. Tidak wajib persis sama — yang penting **menyebut tujuan, konteks (tiket/kontrak/desain), dan batasan**. Agent akan memilih skill dari tabel routing di `AGENTS.md`; kolom "Skill" di bawah hanya untuk informasi.
 
-> Sebelum mulai di project baru: pastikan `boilerplate/stack-profile.md` sudah terisi. Tanpa itu agent akan berhenti dan bertanya (atau, di mode lomba, membuat asumsi).
+> Sebelum mulai di project baru: pastikan `guideline/stack-profile.md` sudah terisi. Tanpa itu agent akan berhenti dan bertanya (atau, di mode lomba, membuat asumsi).
 
 ## Memulai & orientasi
 
 | Kebutuhan | Contoh prompt | Skill |
 |---|---|---|
-| Menyiapkan project baru | "Baca `boilerplate/README.md`, bantu adopsi paket ini ke repo ini: isi `stack-profile.md` untuk **Next.js**, salin scaffold, sync skill, pasang lint." | — |
+| Menyiapkan project baru | "Baca `guideline/README.md`, bantu adopsi paket ini ke repo ini: isi `stack-profile.md` untuk **Next.js**, salin scaffold, sync skill, pasang lint." | — |
 | Orientasi area kode | "Halaman **top up** ada di file mana saja? Pakai `page-map.md` dulu." | AGENTS § Navigation |
 | Ganti ke mode lomba | "Set `mode: competition` di stack profile. Timebox 6 jam, catat asumsi di `ASSUMPTIONS.md`." | `bp-competition-mode` |
 

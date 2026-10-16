@@ -4,9 +4,9 @@
 // into .claude/agents/.
 //
 // Usage (run from anywhere; paths resolve relative to the repo root):
-//   node boilerplate/scripts/sync-skills.mjs            # write copies
-//   node boilerplate/scripts/sync-skills.mjs --check    # exit 1 if any copy drifted (for CI)
-//   node boilerplate/scripts/sync-skills.mjs --targets .claude/skills,.agents/skills
+//   node guideline/scripts/sync-skills.mjs            # write copies
+//   node guideline/scripts/sync-skills.mjs --check    # exit 1 if any copy drifted (for CI)
+//   node guideline/scripts/sync-skills.mjs --targets .claude/skills,.agents/skills
 //   node scripts/sync-skills.mjs --repo-root ../some-project   # explicit target repo
 //
 // Repo root = parent of the guideline folder, unless --repo-root is given.
@@ -33,7 +33,7 @@ const repoRootArg = argValue('--repo-root');
 if (!repoRootArg && existsSync(join(guidelineRoot, '.git'))) {
   console.error(
     'This is the guideline pack source repo: there is no target repo above it.\n' +
-    'Copy the pack into a project as boilerplate/ and run it there, or pass --repo-root <path>.',
+    'Copy the pack into a project as guideline/ and run it there, or pass --repo-root <path>.',
   );
   process.exit(2);
 }

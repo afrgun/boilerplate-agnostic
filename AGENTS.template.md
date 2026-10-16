@@ -5,7 +5,7 @@ Root instructions for AI coding agents working in a repository that adopts this 
 
 ## Guideline root
 
-- `<guideline>` = `boilerplate/` (change this line if the pack lives elsewhere).
+- `<guideline>` = `guideline/` (change this line if the pack lives elsewhere).
 - Stack facts live in `<guideline>/stack-profile.md`. Stack-specific methods and code templates live in `<guideline>/references/<stack>.md`, where `<stack>` is the `stack` value in the profile (`nextjs` | `react` | `angular`).
 - **Before writing code, read `stack-profile.md` and the matching `references/<stack>.md`.** If the profile is missing or a needed section is empty, stop and ask the user (competition mode: see `bp-competition-mode` § Assumptions). Do not guess the stack, commands, or folder layout.
 

@@ -35,7 +35,7 @@ src/
 ├── app/                      # composition root (lint element `app`): AppProviders, router, query client — nobody imports it
 ├── core/di/                  # lint element `di`: ports.ts (createPorts), ports-context.tsx (PortsProvider, usePorts) — presentation may import
 ├── core/http/                # http client, api-endpoints.ts, to-app-error.ts
-├── shared/lib/               # pure cross-feature helpers (formatOrDash, ...)
+├── shared/lib/               # pure cross-feature helpers: format.ts (formatOrDash), error-messages.ts (toUiError message map — not in core/, presentation cannot import core)
 ├── shared/kernel/            # result.ts, app-error.ts
 ├── shared/ui/                # atoms & molecules
 └── features/<feature>/

@@ -1,7 +1,7 @@
 // Architecture boundary rules (ESLint flat config) — eslint-plugin-boundaries v7 syntax.
 //
 // Usage in the target repo's eslint.config.mjs:
-//   import boundaries from './boilerplate/lint/eslint.boundaries.mjs';
+//   import boundaries from './guideline/lint/eslint.boundaries.mjs';
 //   export default [...stackConfigs, ...boundaries];
 //
 // Requires: eslint-plugin-boundaries@^7, eslint-import-resolver-typescript.
@@ -34,7 +34,7 @@ export default [
         // Composition root, part 1: route/app shell. Creates adapters, nobody imports it.
         // Next.js: route files; React: AppProviders/router; Angular: app.config/app.routes.
         { type: 'app', pattern: 'src/app/**' },
-        // Framework entry files directly under src/ (Next: middleware.ts, instrumentation.ts;
+        // Framework entry files directly under src/ (Next: proxy.ts — formerly middleware.ts — instrumentation.ts;
         // Vite/Angular: main.ts; env.ts; global *.d.ts) behave like the composition root.
         // 'mode: file' is deprecated in v7 but is the only working option for single-file elements.
         { type: 'app', pattern: 'src/*.{ts,tsx}', mode: 'file' },

@@ -5,7 +5,7 @@ description: Use when a screen is slow, re-renders too often, loads too much dat
 
 # Performance
 
-Agnostic principles here; framework techniques in `<guideline>/references/<stack>.md` and any vendor performance skill installed for the stack.
+Agnostic principles here; framework techniques in `<guideline>/references/<stack>.md`. If the profile lists vendor skills (**Vendor skills**; candidates per stack in `references/<stack>.md` § 1), use them alongside this skill.
 
 ## Measure first
 

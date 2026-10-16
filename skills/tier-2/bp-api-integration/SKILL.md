@@ -15,12 +15,14 @@ If `mode: competition` in the profile, apply overrides from `bp-competition-mode
 
 ## Inputs to gather
 
+Read the contract first from the contracts folder in the profile (**HTTP → API contracts location**, default `<guideline>/api-contracts/<feature>.md`). If the folder does not exist, copy `<guideline>/scaffold/api-contracts/` there. When the user gives a contract in chat or a sample response, save it there using `_template.md` (personal data removed) before coding.
+
 1. Method + path + query/body params.
 2. Response envelope and the success code(s) — HTTP status **and** backend business code if the API has one.
 3. Error codes with meaning (e.g. `ABC40901 = slot full`).
 4. Which fields are guaranteed vs optional; date formats; enums.
 
-If the contract is missing, ask for it or a real sample response. Do not guess field names.
+If the contract is missing, ask for it or a real sample response (competition mode: see `bp-competition-mode` § Assumptions — a mock adapter with assumed fields is acceptable there, recorded in `ASSUMPTIONS.md`). Do not guess field names silently.
 
 ## Steps
 

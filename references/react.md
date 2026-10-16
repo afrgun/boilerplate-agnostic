@@ -18,6 +18,16 @@
 
 **Jembatan `Result` ↔ TanStack Query**: port tidak melempar, tetapi TanStack Query butuh lemparan untuk `isError`. Gunakan `unwrap()` di `queryFn`/`mutationFn` — **hanya di presentation**.
 
+**Skill vendor (opsional)** — dipasang di samping skill `bp-*`, dicatat di `stack-profile.md` § Vendor skills:
+
+| Skill | Penerbit | Fokus | Dipakai bersama |
+|---|---|---|---|
+| `vercel-react-best-practices` | Vercel (MIT) | Performa React: re-render, bundle, waterfall data | `bp-performance` |
+| `vercel-composition-patterns` | Vercel (MIT) | Compound components, context provider, hindari boolean props | `bp-ui-components` |
+| `web-design-guidelines` | Vercel | Review UI terhadap Web Interface Guidelines (a11y, UX) | `bp-ui-components`, subagent `ui-reviewer` |
+
+Ambil dari sumber resmi penerbit dan catat sumber + versinya. Bila aturan skill vendor bertentangan dengan skill `bp-*`, skill `bp-*` yang berlaku (aturan proyek).
+
 ## 2. Folder map
 
 ```

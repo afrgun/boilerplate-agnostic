@@ -36,7 +36,7 @@ If `mode: competition` in the profile, apply overrides from `bp-competition-mode
 5. **Each phase leaves the code compiling** and its tests passing.
 6. **Dry-run mode** ("scaffold", "plan only"): create specs and empty files with correct names/locations, no implementation.
 7. If the design shows a surface that does not exist yet, it is a **new feature folder** — do not attach it to the closest existing feature.
-8. Update `<guideline>/page-map.md` (if present) with the new route and its entry files.
+8. Update `<guideline>/page-map.md` with the new route, its raw-prompt aliases, and entry files (create it from `<guideline>/scaffold/page-map.md` if missing).
 
 ## Phase 0 question checklist
 

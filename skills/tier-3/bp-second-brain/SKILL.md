@@ -20,7 +20,7 @@ INDEX.md                 # files, status, "Last processed: <commit hash>", tag i
 05-tooling-ci.md
 ```
 
-Create the folder with these files on first use.
+On first use, copy `<guideline>/scaffold/second-brain/` to `<guideline>/second-brain/` (INDEX + 5 category files with the note templates). The copy is project-owned.
 
 ## What goes in
 

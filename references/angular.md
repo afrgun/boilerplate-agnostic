@@ -16,6 +16,8 @@
 | Form | Reactive Forms (typed) | Validasi di boundary |
 | Test | Runner sesuai Angular CLI versi terpilih (Jest/Vitest/Karma) + Testing Library Angular | Ikuti default CLI |
 
+**Skill vendor (opsional)** — `web-design-guidelines` (Vercel) bersifat framework-agnostic dan bisa dipakai untuk review UI/a11y bersama `bp-ui-components`. Untuk praktik khusus Angular belum ada skill vendor yang direkomendasikan; acuan utama adalah dokumentasi resmi Angular. Bila tim menemukan skill tepercaya, daftarkan di sini dan di `stack-profile.md` § Vendor skills. Bila bertentangan dengan skill `bp-*`, skill `bp-*` yang berlaku.
+
 ## 2. Folder map
 
 ```

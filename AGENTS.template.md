@@ -51,6 +51,8 @@ One topic has exactly one owning skill. Skills reference each other instead of r
 
 - If `<guideline>/page-map.md` exists, resolve vague UI terms ("bug in work type page") to files there before any broad search. If an entry is missing or stale, fix the map in the same change.
 - If `<guideline>/second-brain/INDEX.md` exists, check it for known gotchas before debugging.
+- Backend contracts live in the folder set in `stack-profile.md` → HTTP → API contracts location (default `<guideline>/api-contracts/`). Read them before integrating an endpoint.
+- Starting formats for these project-owned files are in `<guideline>/scaffold/`.
 
 ## Maintenance
 

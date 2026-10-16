@@ -22,6 +22,14 @@
 | typescript-eslint | `^8` |
 | test runner | |
 
+## Vendor skills
+
+Optional third-party skills installed for this stack (candidates in `references/<stack>.md` § 1). Record the source so every teammate installs the same version.
+
+| Skill | Source | Version | Installed to |
+|---|---|---|---|
+| | | | |
+
 ## Commands
 
 | Purpose | Command |
@@ -72,6 +80,7 @@
 | base URL source | |
 | endpoints file | `src/core/http/api-endpoints.ts` |
 | error normalizer | `src/core/http/to-app-error.ts` |
+| API contracts location | `<guideline>/api-contracts/` (one file per feature) |
 | backend envelope shape | e.g. `{ status: { code, message }, data, meta, error }` |
 | backend success codes | |
 

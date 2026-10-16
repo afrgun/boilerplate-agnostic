@@ -16,6 +16,7 @@ These instructions are for agents **editing the pack itself**. Do not follow `AG
 | `agents/*.md` | Reviewer subagents | Yes (synced into `.claude/agents/`) |
 | `lint/` | ESLint boundaries config (v7) | Yes |
 | `scripts/sync-skills.mjs` | Copies skills into agent folders of a target repo; `--check` for CI | Yes |
+| `scaffold/` | Starting formats for project-owned files (page-map, second-brain, api-contracts, ASSUMPTIONS) | Yes — copied once; the project's copies are never overwritten on upgrade |
 
 ## Rules when editing
 

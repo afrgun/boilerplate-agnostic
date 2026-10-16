@@ -30,7 +30,7 @@ Goal: ship a working, demo-able result fast **without** losing the structure tha
 
 ## Assumptions
 
-In competition mode, when information is missing, pick the default from `stack-profile.md` or `references/<stack>.md`, record it in `ASSUMPTIONS.md` at the repo root, and continue.
+In competition mode, when information is missing, pick the default from `stack-profile.md` or `references/<stack>.md`, record it in `ASSUMPTIONS.md` at the repo root (create it from `<guideline>/scaffold/ASSUMPTIONS.md` if missing), and continue.
 
 One line per assumption:
 

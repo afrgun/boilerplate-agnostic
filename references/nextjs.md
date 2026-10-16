@@ -18,6 +18,8 @@
 | Proteksi import | Paket `server-only` di modul server; `"use client"` hanya di komponen interaktif | Mencegah kode/secret server ter-bundle ke client |
 | Test | Vitest + Testing Library (+ MSW); Playwright untuk e2e | Server Component async paling aman diuji lewat e2e |
 
+**Skill vendor (opsional)** — sama dengan `react.md` § 1 (`vercel-react-best-practices` mencakup Server Components, fetching di server, dan bundle Next.js; `vercel-composition-patterns`; `web-design-guidelines`). Catat di `stack-profile.md` § Vendor skills. Bila bertentangan dengan skill `bp-*`, skill `bp-*` yang berlaku.
+
 ## 2. Folder map
 
 ```

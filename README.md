@@ -25,6 +25,7 @@ boilerplate-agnostic/            # repo ini = sumber paket; di repo target disal
 │   └── tier-3/                  # pelengkap — saat tim makin matang
 ├── agents/                      # subagent reviewer (architecture, test, ui)
 ├── lint/                        # ESLint boundaries: aturan import antar layer dipaksa mesin
+├── scaffold/                    # format awal file milik project: page-map, second-brain, api-contracts, ASSUMPTIONS
 └── scripts/
     └── sync-skills.mjs          # salin skills/tier-*/* → .claude/skills, .agents/skills, ... (+ --check untuk CI)
 ```
@@ -67,11 +68,22 @@ Prinsip kurasi: **satu topik = satu skill pemilik**; skill lain hanya merujuk (m
 
 1. Salin isi repo ini (tanpa `.git`, `AGENTS.md`, `CLAUDE.md` milik repo ini) ke folder `boilerplate/` di root repo target. Nama folder boleh diganti; sesuaikan `<guideline>` di langkah 2.
 2. Salin `boilerplate/AGENTS.template.md` → `AGENTS.md` dan `boilerplate/CLAUDE.template.md` → `CLAUDE.md` di root repo target (hapus komentar TEMPLATE). Bila repo target sudah punya file sejenis, gabungkan — jangan ada dua sumber instruksi.
-3. Salin `stack-profile.template.md` → `stack-profile.md`, isi sesuai stack terpilih (termasuk `mode` dan versi tooling).
+3. Salin `stack-profile.template.md` → `stack-profile.md`, isi sesuai stack terpilih (termasuk `mode`, versi tooling, dan skill vendor bila dipakai — kandidatnya di `references/<stack>.md` § 1).
+   Opsional sejak awal: salin `scaffold/page-map.md` dan `scaffold/api-contracts/` ke `<guideline>/` (skill juga akan membuatnya saat pertama dibutuhkan).
 4. Jalankan `node <guideline>/scripts/sync-skills.mjs` → skill tersalin flat ke folder agent (`.claude/skills/`, `.agents/skills/`, ...). **Jangan edit hasil salinan**; edit di `skills/tier-*/`.
 5. Pasang `lint/` ke konfigurasi ESLint repo (lihat `lint/README.md`), sesuaikan path dengan layer map di `stack-profile.md`, lalu jalankan uji sanity: import `presentation → infrastructure` harus membuat lint gagal.
 6. Bangun **satu fitur contoh** lewat `bp-feature-lifecycle`. Bandingkan hasilnya dengan `references/<stack>.md`; perbaiki reference dari kode yang sudah direview (bukan sebaliknya).
 7. Tambahkan `node <guideline>/scripts/sync-skills.mjs --check` ke CI agar salinan skill tidak drift.
+
+## Upgrade paket di project yang sudah memakai
+
+File di `<guideline>/` terbagi dua:
+
+| Milik paket (boleh ditimpa versi baru) | Milik project (**jangan ditimpa**) |
+|---|---|
+| `skills/`, `references/`, `agents/`, `lint/`, `scripts/`, `scaffold/`, `*.template.md`, `README.md` | `stack-profile.md`, `page-map.md`, `second-brain/`, `api-contracts/` |
+
+Langkah: salin versi baru hanya untuk kolom kiri → bandingkan `AGENTS.template.md` baru dengan `AGENTS.md` root project dan gabungkan perubahannya → jalankan `sync-skills.mjs` → cek `stack-profile.template.md` untuk field baru dan tambahkan ke `stack-profile.md`.
 
 ## Aturan pemeliharaan paket
 

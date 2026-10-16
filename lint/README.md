@@ -30,7 +30,7 @@ Urutan elemen penting: **elemen pertama yang cocok yang dipakai** — `app` dan 
    ```
 2. Di `eslint.config.mjs` repo target:
    ```js
-   import boundaries from './boilerplate/lint/eslint.boundaries.mjs';
+   import boundaries from './guideline/lint/eslint.boundaries.mjs';
    export default [...stackConfigs, ...boundaries];
    ```
 3. Sesuaikan `pattern` dengan **Layer map** di `stack-profile.md`.
@@ -41,7 +41,7 @@ Urutan elemen penting: **elemen pertama yang cocok yang dipakai** — `app` dan 
 
 | Stack | `app` | `di` |
 |---|---|---|
-| Next.js | `src/app/**` + `src/middleware.ts` dsb. | `src/core/di/**` (`server-ports.ts`, `client-ports-context.tsx`) |
+| Next.js | `src/app/**` + `src/proxy.ts` (dulu `middleware.ts`) dsb. | `src/core/di/**` (`server-ports.ts`; `client-ports-context.tsx` hanya bila ada adapter di browser) |
 | React | `src/app/**` + `src/main.tsx` | `src/core/di/**` (`ports.ts`, `ports-context.tsx`) |
 | Angular | `src/app/**` + `src/main.ts` + `src/features/*/*.routes.ts` | — (DI bawaan Angular lewat providers di route) |
 

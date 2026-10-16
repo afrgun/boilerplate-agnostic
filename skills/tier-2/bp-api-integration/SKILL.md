@@ -49,3 +49,7 @@ If the contract is missing, ask for it or a real sample response (competition mo
 - Mapper tests cover: full payload, missing optional fields, unknown enum value, invalid date.
 - Adapter returns `err` for HTTP failure, business-code failure, and network error.
 - No raw type imported outside `infrastructure/`.
+
+## Examples
+
+Worked examples (fictional `topup` feature): `examples.md` in this skill folder. Read it when the rules above leave a placement or format decision unclear.

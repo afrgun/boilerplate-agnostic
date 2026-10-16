@@ -53,3 +53,7 @@ Still **stop and ask** only for:
 5. Secondary flows.
 
 Record anything skipped in `ASSUMPTIONS.md` under a `## Not done` heading so it is visible to reviewers/judges.
+
+## Examples
+
+Worked examples (fictional `topup` feature): `examples.md` in this skill folder. Read it when the rules above leave a placement or format decision unclear.

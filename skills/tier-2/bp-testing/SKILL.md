@@ -57,3 +57,7 @@ Fakes: <ports or http to fake>
 
 - Required targets above have tests.
 - Test command from the profile passes for the touched area.
+
+## Examples
+
+Worked examples (fictional `topup` feature): `examples.md` in this skill folder. Read it when the rules above leave a placement or format decision unclear.

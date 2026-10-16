@@ -67,3 +67,7 @@ Dependency direction: `presentation → application → domain ← infrastructur
 
 - Concepts and full templates: `<guideline>/references/<stack>.md`.
 - Enforcement: `<guideline>/lint/eslint.boundaries.mjs` (element list in `<guideline>/lint/README.md`).
+
+## Examples
+
+Worked examples (fictional `topup` feature): `examples.md` in this skill folder. Read it when the rules above leave a placement or format decision unclear.

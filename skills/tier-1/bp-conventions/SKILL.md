@@ -17,7 +17,7 @@ If `mode: competition` in the profile, apply overrides from `bp-competition-mode
 |---|---|
 | Files & folders | per profile (default `kebab-case`) |
 | Components | `PascalCase` |
-| Functions, variables, stores, hooks | `camelCase`; hooks start with `use` |
+| Functions, variables, stores, hooks | `camelCase`; hooks start with `use` — and **only** hooks: a plain function named `useX` breaks hook lint rules (name it `isX`/`getX`) |
 | Types & interfaces | `PascalCase`, no `I` prefix unless the profile says so |
 | Constants | `UPPER_SNAKE_CASE` for true constants |
 | Mappers | `toX()` / `fromX()` |
@@ -62,3 +62,7 @@ A change is done only when **all** of these hold:
 7. Skills/references updated if a shared pattern changed.
 
 Report the commands you ran and their results. Never claim done on unverified work.
+
+## Examples
+
+Worked examples (fictional `topup` feature): `examples.md` in this skill folder. Read it when the rules above leave a placement or format decision unclear.

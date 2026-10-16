@@ -5,7 +5,7 @@ description: Use when creating, refactoring, or reviewing UI — placing compone
 
 # UI Components (Atomic Design)
 
-Owning skill for UI composition. Stack-specific syntax (JSX, Angular templates) comes from `<guideline>/references/<stack>.md` § 10.
+Owning skill for UI composition. Stack-specific template/markup syntax comes from `<guideline>/references/<stack>.md` § 10.
 
 ## Stack context (read first)
 
@@ -31,7 +31,7 @@ Promote a feature-local component to `shared/ui` only when a second feature need
 4. **Composition over boolean props**: use children/slots/compound components instead of `isX`, `showY`, `variantZ` flag piles.
 5. **No business rules in UI**. Conditions like "can approve" come from domain functions via the store.
 6. **Render API-derived values through `formatOrDash(value, format?)`** from `src/shared/lib/format.ts` — it returns `'-'` for `null`, `undefined`, empty string, or `NaN`, and applies the optional formatter otherwise. Do not hand-write `value || '-'` / `?? '-'` in components. If the helper does not exist yet, create it there (template in `references/<stack>.md` § 3) with tests.
-7. **Error titles/messages come from the central message map** keyed by `AppError.type`; no inline status-code maps in components.
+7. **Error titles/messages come from the central message map** keyed by `AppError.type` (in `src/shared/lib`, so presentation may import it); no inline status-code maps in components.
 8. **Repeated class strings or markup** (2+ times) → extract a component or a variant map.
 9. **Every interactive element is keyboard reachable** and has an accessible name; clickable non-button elements are a smell — use the Button atom.
 10. **Loading, empty, error states are designed**, not afterthoughts: use shared Skeleton / EmptyState / ErrorState components.
@@ -49,3 +49,7 @@ Promote a feature-local component to `shared/ui` only when a second feature need
 - Empty/loading/error states covered.
 - Missing values render `'-'`.
 - `bp-conventions` done criteria pass.
+
+## Examples
+
+Worked examples (fictional `topup` feature): `examples.md` in this skill folder. Read it when the rules above leave a placement or format decision unclear.

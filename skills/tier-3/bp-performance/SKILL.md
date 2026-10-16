@@ -31,3 +31,7 @@ Agnostic principles here; framework techniques in `<guideline>/references/<stack
 
 - Before/after numbers in the summary.
 - No behavior change (tests still green).
+
+## Examples
+
+Worked examples (fictional `topup` feature): `examples.md` in this skill folder. Read it when the rules above leave a placement or format decision unclear.

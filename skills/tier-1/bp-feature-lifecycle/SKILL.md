@@ -53,3 +53,7 @@ If `mode: competition` in the profile, apply overrides from `bp-competition-mode
 - All phases completed or explicitly skipped with a reason.
 - `bp-conventions` done criteria pass.
 - Summary lists: files created/changed per layer, decisions taken, open questions.
+
+## Examples
+
+Worked examples (fictional `topup` feature): `examples.md` in this skill folder. Read it when the rules above leave a placement or format decision unclear.

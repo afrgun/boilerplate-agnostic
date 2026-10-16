@@ -27,3 +27,7 @@ No fix before a confirmed root cause.
 ## Report
 
 Symptom → root cause (file:line) → fix → test → follow-ups.
+
+## Examples
+
+Worked examples (fictional `topup` feature): `examples.md` in this skill folder. Read it when the rules above leave a placement or format decision unclear.

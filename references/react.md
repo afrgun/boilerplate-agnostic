@@ -35,7 +35,7 @@ src/
 ├── app/                      # composition root (lint element `app`): AppProviders, router, query client — nobody imports it
 ├── core/di/                  # lint element `di`: ports.ts (createPorts), ports-context.tsx (PortsProvider, usePorts) — presentation may import
 ├── core/http/                # http client, api-endpoints.ts, to-app-error.ts
-├── shared/lib/               # pure cross-feature helpers (formatOrDash, ...)
+├── shared/lib/               # pure cross-feature helpers: format.ts (formatOrDash), error-messages.ts (toUiError message map — not in core/, presentation cannot import core)
 ├── shared/kernel/            # result.ts, app-error.ts
 ├── shared/ui/                # atoms & molecules
 └── features/<feature>/
@@ -103,23 +103,35 @@ export interface BankRepository {
 ```ts
 // features/topup/infrastructure/bank.mapper.ts
 export interface BankApiItem { name?: string; desc?: string; isActive?: boolean; isOtherBank?: boolean }
-export const toBank = (api: BankApiItem): Bank => ({
-  code: api.name ?? '',
-  name: api.desc ?? api.name ?? '-',
-  isActive: api.isActive ?? false,
-  isOtherBank: api.isOtherBank ?? false,
-});
+
+// Required business field missing → null; never fabricate an id (bp-api-integration).
+export const toBank = (api: BankApiItem): Bank | null => {
+  if (!api.name) return null;
+  return {
+    code: api.name,
+    name: api.desc ?? api.name,
+    isActive: api.isActive ?? false,
+    isOtherBank: api.isOtherBank ?? false,
+  };
+};
+
+// All-or-nothing: one invalid item makes the whole response invalid.
+export const toBanks = (items: readonly BankApiItem[]): Bank[] | null => {
+  const banks = items.map(toBank);
+  return banks.every((bank): bank is Bank => bank !== null) ? banks : null;
+};
 
 // features/topup/infrastructure/http-bank-repository.ts
 import { http } from '@/core/http/http-client';          // returns Result, never throws
 import { API } from '@/core/http/api-endpoints';
-import { ok } from '@/shared/kernel/result';
+import { ok, err } from '@/shared/kernel/result';
 
 export const createHttpBankRepository = (): BankRepository => ({
   async getBanks() {
     const res = await http.get<{ data?: BankApiItem[] }>(API.topup.banks);
     if (!res.ok) return res;
-    return ok((res.value.data ?? []).map(toBank));
+    const banks = toBanks(res.value.data ?? []);
+    return banks ? ok(banks) : err({ type: 'server', message: 'Invalid bank data from server' });
   },
 });
 ```
